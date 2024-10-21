@@ -20,7 +20,13 @@ const TeamDisplay = () => {
                     toast.error(message);
                 }
             } catch (error) {
-                console.log(error.message);
+                if (error.response) {
+                    toast.error(
+                        error.response.data.message || "An error occurred"
+                    );
+                } else {
+                    toast.error("Network error. Please try again later.");
+                }
             }
         }
         fetchTeam();

@@ -52,7 +52,11 @@ const TeamForm = () => {
                 toast.error(message);
             }
         } catch (error) {
-            toast.error(error.message);
+            if (error.response) {
+                toast.error(error.response.data.message || "An error occurred");
+            } else {
+                toast.error("Network error. Please try again later.");
+            }
         } finally {
             setLoading(false);
             setTeam({ name: "", players: [] });
@@ -72,7 +76,13 @@ const TeamForm = () => {
                 }
                 setAllPlayers(data);
             } catch (error) {
-                toast(error.message);
+                if (error.response) {
+                    toast.error(
+                        error.response.data.message || "An error occurred"
+                    );
+                } else {
+                    toast.error("Network error. Please try again later.");
+                }
             }
         }
         fetchAllPlayers();
