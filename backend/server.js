@@ -10,8 +10,13 @@ connectDB();
 
 const app = express();
 
+const corsOptions = {
+    origin: "https://basic-fantasy-game.onrender.com",
+    methods: "GET,POST",
+};
+
+app.use(cors(corsOptions));
 app.use(express.json());
-app.use(cors());
 
 app.use(playerRoutes);
 app.use(teamRoutes);
