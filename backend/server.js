@@ -11,7 +11,7 @@ connectDB();
 const app = express();
 
 const corsOptions = {
-    origin: "https://basic-fantasy-game.onrender.com",
+    origin: "https://basic-fantasy-game-5vnj.onrender.com",
     methods: "GET,POST",
 };
 
