@@ -1,6 +1,209 @@
 #root {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
-  text-align: center;
+    max-width: 1280px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    font-size: 16px;
+    line-height: 1.5;
+    color: #333;
+    background-color: #f9f9f9;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-weight: bold;
+    color: #212121;
+    margin-bottom: 0.5em;
+}
+
+p {
+    margin-bottom: 1em;
+}
+
+a {
+    text-decoration: none;
+    color: #337ab7;
+}
+
+a:hover {
+    color: #23527c;
+}
+
+button {
+    cursor: pointer;
+    border: none;
+    padding: 0.5em 1em;
+    font-size: 1em;
+    background-color: #337ab7;
+    color: #fff;
+    border-radius: 0.25em;
+    display: inline-block;
+    margin: 0 10px;
+}
+
+button:hover {
+    background-color: #23527c;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 10px auto;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+}
+
+form {
+    max-width: 400px;
+    margin: 40px auto;
+    padding: 20px;
+    background-color: #f9f9f9;
+    border: 1px solid #ccc;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+form > h1 {
+    text-align: center;
+}
+
+form input,
+form select,
+form textarea {
+    width: 100%;
+    height: 40px;
+    margin-bottom: 20px;
+    padding: 10px;
+    border: 1px solid #ccc;
+}
+
+form input[type="submit"] {
+    width: 100%;
+    height: 40px;
+    background-color: #4caf50;
+    color: #fff;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+form input[type="submit"]:hover {
+    background-color: #3e8e41;
+}
+
+form > div > label {
+    display: block;
+    margin-bottom: 10px;
+    text-align: left;
+    font-weight: bolder;
+}
+
+form input:focus,
+form select:focus,
+form textarea:focus {
+    border-color: #aaa;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.checkbox-container {
+    margin: 20px 0;
+}
+
+.checkbox-container label {
+    margin-left: 8px;
+    font-size: 16px;
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.checkbox-container div {
+    margin-top: 5px;
+    display: flex;
+    align-items: center;
+    margin-left: 10px;
+}
+
+.checkbox-container input[type="checkbox"] {
+    width: 17px;
+    height: 17px;
+    cursor: pointer;
+    margin: 0;
+}
+
+.checkbox-container input[type="checkbox"]:hover {
+    transform: scale(1.1);
+    transition: transform 0.2s;
+}
+
+table {
+    border-collapse: collapse;
+    width: 100%;
+    margin-bottom: 25px;
+}
+
+th,
+td {
+    border: 1px solid #ddd;
+    padding: 10px;
+    text-align: left;
+}
+
+th {
+    background-color: #f0f0f0;
+}
+
+tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+tr:hover {
+    background-color: #ccc;
+}
+
+nav {
+    background-color: #222;
+    padding: 1rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    flex-grow: 1;
+}
+
+nav li {
+    margin-right: 5vw;
+    margin-left: 5vw;
+}
+
+nav .nav-link {
+    color: #fff;
+    text-decoration: none;
+    transition: color 0.2s ease;
+}
+
+nav .nav-link:hover {
+    color: #ccc;
+}
+
+nav .nav-link.active {
+    color: #fff;
+    font-weight: bold;
 }
