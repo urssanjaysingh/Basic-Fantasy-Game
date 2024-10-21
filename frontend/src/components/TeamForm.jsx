@@ -119,7 +119,7 @@ const TeamForm = () => {
                                         onChange={handleChange}
                                     />
                                     <label htmlFor={`player-${_id}`}>
-                                        {name}, Points: {points}, {position}
+                                        {name}, {position}, Pts: {points}
                                     </label>
                                 </div>
                             );
